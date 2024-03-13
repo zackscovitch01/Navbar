@@ -5,7 +5,7 @@
 }
 /* fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap");
 html {
   font-size: 100%;
 } /*16px*/
@@ -42,8 +42,8 @@ html {
   --green-dark: #0f5132;
 
   /* fonts  */
-  --headingFont: 'Roboto', sans-serif;
-  --bodyFont: 'Nunito', sans-serif;
+  --headingFont: "Roboto", sans-serif;
+  --bodyFont: "Nunito", sans-serif;
   --smallText: 0.7em;
   /* rest of the vars */
   --backgroundColor: var(--grey-50);
@@ -257,3 +257,128 @@ ul {
 Navbar
 ===============
 */
+
+nav {
+  background: var(--white);
+  box-shadow: var(--shadow-2);
+  line-height: 1;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-toggle {
+  color: var(--primary-500);
+  border-color: transparent;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav-toggle:hover {
+  transform: rotate(90deg);
+}
+
+.nav-header span {
+  color: var(--primary-500);
+}
+
+.logo {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.social-icons {
+  display: none;
+}
+
+.links li {
+  background: var(--white);
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+
+.links a {
+  color: var(--grey-700);
+  font-size: 1rem;
+  letter-spacing: var(--letterSpacing);
+  transition: var(--transition);
+  padding: 0.75rem 1rem;
+  display: block;
+}
+
+.links a:hover {
+  background: var(--primary-300);
+  color: var(--primary-500);
+  padding-left: 1.5rem;
+}
+
+.links {
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  /* todo height overflow transition*/
+  /* 160px 10rem */
+}
+
+.show-links {
+  height: 160px;
+  overflow: visible;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-center {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+
+  .links {
+    display: flex;
+    height: auto;
+  }
+
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+
+  .links a:hover {
+    background: transparent;
+    color: var(--primary-500);
+    padding: 0;
+  }
+
+  .social-icons {
+    display: flex;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: var(--primary-500);
+    transition: var(--transition);
+  }
+
+  .social-icons a:hover {
+    color: var(--primary-300);
+  }
+}
